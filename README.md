@@ -1,17 +1,18 @@
 This test will randomly fail when using ZenohRmw, and always succeed using Cyclone DDS
 
---- Compilation ---
+# Compilation 
 
 colcon build
 
 (eventually fetch rosdeps)
 
---- Execution ---
+# Execution 
 
 From the root of your workspace, execute the run_test.sh script
 
---- Output when failing ---
+# Output when failing 
 
+```
 1: [subscription_test_exe-1] [INFO] [1724167333.685161728] [rmw_zenoh_cpp]: Successfully connected to a Zenoh router with id 836cf11bb72bc56bdb3083b86c4cf067.
 1: [test_subscription-2] [INFO] [1724167333.687056195] [rmw_zenoh_cpp]: Successfully connected to a Zenoh router with id 836cf11bb72bc56bdb3083b86c4cf067.
 1: [test_subscription-2] [==========] Running 1 test from 1 test suite.
@@ -28,11 +29,12 @@ From the root of your workspace, execute the run_test.sh script
 1: [test_subscription-2] Value of: test_client_->wait_for_service(5s)
 1: [test_subscription-2]   Actual: false
 1: [test_subscription-2] Expected: true
+```
 
 
+# Output when succeeding 
 
---- Output when succeeding ---
-
+```
  [test_subscription-2] [INFO] [1724167329.190153490] [rmw_zenoh_cpp]: Successfully connected to a Zenoh router with id 836cf11bb72bc56bdb3083b86c4cf067.
 1: [subscription_test_exe-1] [INFO] [1724167329.198294686] [rmw_zenoh_cpp]: Successfully connected to a Zenoh router with id 836cf11bb72bc56bdb3083b86c4cf067.
 1: [test_subscription-2] [==========] Running 1 test from 1 test suite.
@@ -48,3 +50,4 @@ From the root of your workspace, execute the run_test.sh script
 1: [test_subscription-2] [----------] Global test environment tear-down
 1: [test_subscription-2] [==========] 1 test from 1 test suite ran. (120 ms total)
 1: [test_subscription-2] [  PASSED  ] 1 test.
+```

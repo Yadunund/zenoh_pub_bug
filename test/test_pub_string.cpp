@@ -5,9 +5,6 @@
 using namespace testing;
 using namespace std::chrono_literals;
 
-constexpr double kSpinFreq{50.0};
-constexpr unsigned int kServTimeoutMs{5000};
-
 /// Verifies that a latched topic is received another node
 TEST_F(TestFixture, testPubString) {
   // Initializing the MAP ID

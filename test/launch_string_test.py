@@ -15,7 +15,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             Node(
-                package="iw_poi_registry",
+                package="test_zenoh",
                 name="subscription_test",
                 executable="subscription_test_exe",
                 output="screen",
